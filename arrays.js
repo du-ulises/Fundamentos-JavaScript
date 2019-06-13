@@ -22,9 +22,19 @@ var sacha = {
     altura: 1.9
 };
 
+const esAlta = ({ altura }) => altura > 1.8;
+
 var personas = [diego, ulises, paula, sacha];
 
-for (let i = 0; i < personas.length; i++) {
+/* for (let i = 0; i < personas.length; i++) {
     var persona = personas[i];
     console.log(`${persona.nombre} mide ${persona.altura}mts`)
-}
+} */
+
+var personasAltas = personas.filter(esAlta);
+/* 
+var personasAltas = personas.filter(function (persona) {
+    return persona.altura > 1.8;
+});
+ */
+console.log(personasAltas);
