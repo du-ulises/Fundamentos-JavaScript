@@ -37,4 +37,19 @@ var personasAltas = personas.filter(function (persona) {
     return persona.altura > 1.8;
 });
  */
-console.log(personasAltas);
+
+const pasarAlturaACm = persona => ({
+    ...persona,
+    altura: persona.altura * 100
+})
+
+/* {
+    return {
+        ...persona,
+        altura: persona.altura * 100
+    }
+}; */
+
+var personasCms = personas.map(pasarAlturaACm);
+
+console.log(personasCms);
