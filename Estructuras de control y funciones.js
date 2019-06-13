@@ -41,11 +41,28 @@ function imprimirProfesiones(persona) {
     }
 }
 
+imprimirProfesiones(sacha)
+
 const MAYORIA_DE_EDAD = 18
 
+//Funciones que retornan valores
+/*
 function esMayorDeEdad(persona) {
     return persona.edad >= MAYORIA_DE_EDAD
 }
+*/
+
+//Funciones anónimas
+/*
+const esMayorDeEdad = function (persona) {
+    return persona.edad >= MAYORIA_DE_EDAD
+}
+*/
+
+//ARROW FUNCTIONS
+//const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD
+//Desestructurando el parametro
+const esMayorDeEdad = ({ edad }) => edad >= MAYORIA_DE_EDAD
 
 function imprimirSiEsMayorDeEdad(persona) {
     if (esMayorDeEdad(persona)) {
@@ -55,5 +72,18 @@ function imprimirSiEsMayorDeEdad(persona) {
     }
 }
 
-imprimirProfesiones(sacha)
 //imprimirSiEsMayorDeEdad(sacha)
+
+function permitirAcceso(persona) {
+    if (!esMayorDeEdad(persona)) {
+        console.log('Acceso denegado')
+    }
+}
+
+const esMenorDeEdad = ({ edad }) => edad < MAYORIA_DE_EDAD
+
+function imprimirEsMenorDeEdad(persona) {
+    if(!esMenorDeEdad(persona)){
+        console.log(`No, ${persona.nombre} es mayor de edad`)
+    }
+}
