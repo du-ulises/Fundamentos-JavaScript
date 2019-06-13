@@ -17,10 +17,5 @@ Persona.prototype.soyAlto = function () {
 }
 
 var sacha = new Persona('Sacha', 'Lifszyc', 1.85)
-//sacha.saludar()
 var erika = new Persona('Erika', 'Luna', 1.70)
 var arturo = new Persona('Arturo', 'Gil', 1.82)
-
-
-
-
